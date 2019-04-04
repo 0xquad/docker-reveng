@@ -1,0 +1,12 @@
+version: '2.3'
+services:
+    reveng:
+        build: .
+        image: reveng
+        volumes:
+            - $HOME/firmware:/firmware
+            - /dev/mtd0:/dev/mtd0
+            - /dev/mtd0block:/dev/mtd0block
+            - /dev/mtd0ro:/dev/mtd0ro
+            - /dev/ubi_ctrl:/dev/ubi_ctrl
+            - /tmp:/tmp
